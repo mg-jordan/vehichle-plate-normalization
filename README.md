@@ -94,12 +94,7 @@ Compares two inputs by canonical identity.
 
 ## Development
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -U pip pytest build
-pip install -e .
-pytest
-python -m build
+pip install saudi-plate
 ```
 
 ## Notes
