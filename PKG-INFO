@@ -4,9 +4,9 @@ Version: 0.1.0
 Summary: Saudi vehicle plate parsing, normalization, validation, and formatting.
 Author: Osama Samman, OpenAI
 License-Expression: MIT
-Project-URL: Homepage, https://github.com/your-org/saudi-plate
-Project-URL: Repository, https://github.com/your-org/saudi-plate
-Project-URL: Issues, https://github.com/your-org/saudi-plate/issues
+Project-URL: Homepage, https://github.com/mg-jordan/vehichle-plate-normalization/tree/Saudi-Plate-Numbers
+Project-URL: Repository, https://github.com/mg-jordan/vehichle-plate-normalization/tree/Saudi-Plate-Numbers
+Project-URL: Issues, https://github.com/mg-jordan/vehichle-plate-normalization/tree/Saudi-Plate-Numbers/issues
 Keywords: saudi,ksa,vehicle,license-plate,validation,normalization
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
