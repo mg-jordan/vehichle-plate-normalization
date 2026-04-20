@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/saudi_plate/__init__.py
+src/saudi_plate/api.py
+src/saudi_plate/core.py
+src/saudi_plate/mappings.py
+src/saudi_plate/models.py
+src/saudi_plate/py.typed
+src/saudi_plate.egg-info/PKG-INFO
+src/saudi_plate.egg-info/SOURCES.txt
+src/saudi_plate.egg-info/dependency_links.txt
+src/saudi_plate.egg-info/top_level.txt
+tests/test_saudi_plate.py

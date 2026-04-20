@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "saudi-plate"
+version = "0.1.0"
+description = "Saudi vehicle plate parsing, normalization, validation, and formatting."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+  { name = "Osama Samman, OpenAI" }
+]
+keywords = ["saudi", "ksa", "vehicle", "license-plate", "validation", "normalization"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Text Processing :: General"
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/mg-jordan/vehichle-plate-normalization/tree/Saudi-Plate-Numbers"
+Repository = "https://github.com/mg-jordan/vehichle-plate-normalization/tree/Saudi-Plate-Numbers"
+Issues = "https://github.com/mg-jordan/vehichle-plate-normalization/tree/Saudi-Plate-Numbers/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+saudi_plate = ["py.typed"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

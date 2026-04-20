@@ -1,0 +1,785 @@
+{
+  "generated_at_utc": "2026-04-20T08:02:08.834573+00:00",
+  "summary": {
+    "total_cases": 15,
+    "passed_cases": 15,
+    "failed_cases": 0,
+    "pass_rate_percent": 100.0
+  },
+  "cases": [
+    {
+      "id": "T001",
+      "name": "Canonical English compact",
+      "input": "ABJ1234",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": true,
+        "expect_canonical": "ABJ-1234",
+        "expect_display_en": "ABJ 1234",
+        "expect_display_ar": "١٢٣٤ ا ب ح",
+        "expect_warning_codes": []
+      },
+      "actual": {
+        "success": true,
+        "canonical": "ABJ-1234",
+        "error_codes": [],
+        "warning_codes": [],
+        "is_valid": true,
+        "validation_issue_codes": [],
+        "display_en": "ABJ 1234",
+        "display_ar": "١٢٣٤ ا ب ح",
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        },
+        {
+          "check": "canonical",
+          "expected": "ABJ-1234",
+          "observed": "ABJ-1234",
+          "passed": true
+        },
+        {
+          "check": "warning_codes",
+          "expected": [],
+          "observed": [],
+          "passed": true
+        },
+        {
+          "check": "display_en",
+          "expected": "ABJ 1234",
+          "observed": "ABJ 1234",
+          "passed": true
+        },
+        {
+          "check": "display_ar",
+          "expected": "١٢٣٤ ا ب ح",
+          "observed": "١٢٣٤ ا ب ح",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T002",
+      "name": "English with separators",
+      "input": "ABJ-1234",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": true,
+        "expect_canonical": "ABJ-1234",
+        "expect_display_en": "ABJ 1234",
+        "expect_warning_codes": []
+      },
+      "actual": {
+        "success": true,
+        "canonical": "ABJ-1234",
+        "error_codes": [],
+        "warning_codes": [],
+        "is_valid": true,
+        "validation_issue_codes": [],
+        "display_en": "ABJ 1234",
+        "display_ar": "١٢٣٤ ا ب ح",
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        },
+        {
+          "check": "canonical",
+          "expected": "ABJ-1234",
+          "observed": "ABJ-1234",
+          "passed": true
+        },
+        {
+          "check": "warning_codes",
+          "expected": [],
+          "observed": [],
+          "passed": true
+        },
+        {
+          "check": "display_en",
+          "expected": "ABJ 1234",
+          "observed": "ABJ 1234",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T003",
+      "name": "Arabic letters and Arabic-Indic digits",
+      "input": "ا ب ح ١٢٣٤",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": true,
+        "expect_canonical": "ABJ-1234",
+        "expect_display_en": "ABJ 1234",
+        "expect_display_ar": "١٢٣٤ ا ب ح",
+        "expect_warning_codes": []
+      },
+      "actual": {
+        "success": true,
+        "canonical": "ABJ-1234",
+        "error_codes": [],
+        "warning_codes": [],
+        "is_valid": true,
+        "validation_issue_codes": [],
+        "display_en": "ABJ 1234",
+        "display_ar": "١٢٣٤ ا ب ح",
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        },
+        {
+          "check": "canonical",
+          "expected": "ABJ-1234",
+          "observed": "ABJ-1234",
+          "passed": true
+        },
+        {
+          "check": "warning_codes",
+          "expected": [],
+          "observed": [],
+          "passed": true
+        },
+        {
+          "check": "display_en",
+          "expected": "ABJ 1234",
+          "observed": "ABJ 1234",
+          "passed": true
+        },
+        {
+          "check": "display_ar",
+          "expected": "١٢٣٤ ا ب ح",
+          "observed": "١٢٣٤ ا ب ح",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T004",
+      "name": "Digits before letters allowed in standard mode",
+      "input": "1234 ABJ",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": true,
+        "expect_canonical": "ABJ-1234",
+        "expect_warning_codes": [
+          "REORDERED_INPUT"
+        ]
+      },
+      "actual": {
+        "success": true,
+        "canonical": "ABJ-1234",
+        "error_codes": [],
+        "warning_codes": [
+          "REORDERED_INPUT"
+        ],
+        "is_valid": true,
+        "validation_issue_codes": [
+          "REORDERED_INPUT"
+        ],
+        "display_en": "ABJ 1234",
+        "display_ar": "١٢٣٤ ا ب ح",
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        },
+        {
+          "check": "canonical",
+          "expected": "ABJ-1234",
+          "observed": "ABJ-1234",
+          "passed": true
+        },
+        {
+          "check": "warning_codes",
+          "expected": [
+            "REORDERED_INPUT"
+          ],
+          "observed": [
+            "REORDERED_INPUT"
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T005",
+      "name": "Digits before letters rejected in strict mode",
+      "input": "1234 ABJ",
+      "compare_to": null,
+      "options": {
+        "strictness": "strict",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": false,
+        "expect_error_codes": [
+          "REORDERED_INPUT_NOT_ALLOWED"
+        ]
+      },
+      "actual": {
+        "success": false,
+        "canonical": null,
+        "error_codes": [
+          "REORDERED_INPUT_NOT_ALLOWED"
+        ],
+        "warning_codes": [],
+        "is_valid": false,
+        "validation_issue_codes": [
+          "REORDERED_INPUT_NOT_ALLOWED"
+        ],
+        "display_en": null,
+        "display_ar": null,
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": false,
+          "observed": false,
+          "passed": true
+        },
+        {
+          "check": "error_codes",
+          "expected": [
+            "REORDERED_INPUT_NOT_ALLOWED"
+          ],
+          "observed": [
+            "REORDERED_INPUT_NOT_ALLOWED"
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T006",
+      "name": "Strict mode rejects short digits",
+      "input": "ABJ 123",
+      "compare_to": null,
+      "options": {
+        "strictness": "strict",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": false,
+        "expect_error_codes": [
+          "SHORT_DIGITS_NOT_ALLOWED"
+        ]
+      },
+      "actual": {
+        "success": false,
+        "canonical": null,
+        "error_codes": [
+          "SHORT_DIGITS_NOT_ALLOWED"
+        ],
+        "warning_codes": [],
+        "is_valid": false,
+        "validation_issue_codes": [
+          "SHORT_DIGITS_NOT_ALLOWED"
+        ],
+        "display_en": null,
+        "display_ar": null,
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": false,
+          "observed": false,
+          "passed": true
+        },
+        {
+          "check": "error_codes",
+          "expected": [
+            "SHORT_DIGITS_NOT_ALLOWED"
+          ],
+          "observed": [
+            "SHORT_DIGITS_NOT_ALLOWED"
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T007",
+      "name": "Standard mode accepts short digits",
+      "input": "ABJ 123",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": true,
+        "expect_canonical": "ABJ-123"
+      },
+      "actual": {
+        "success": true,
+        "canonical": "ABJ-123",
+        "error_codes": [],
+        "warning_codes": [],
+        "is_valid": true,
+        "validation_issue_codes": [],
+        "display_en": "ABJ 123",
+        "display_ar": "١٢٣ ا ب ح",
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        },
+        {
+          "check": "canonical",
+          "expected": "ABJ-123",
+          "observed": "ABJ-123",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T008",
+      "name": "Mixed Arabic and Latin letters allowed in standard mode",
+      "input": "AبJ1234",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": true,
+        "expect_canonical": "ABJ-1234"
+      },
+      "actual": {
+        "success": true,
+        "canonical": "ABJ-1234",
+        "error_codes": [],
+        "warning_codes": [],
+        "is_valid": true,
+        "validation_issue_codes": [],
+        "display_en": "ABJ 1234",
+        "display_ar": "١٢٣٤ ا ب ح",
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        },
+        {
+          "check": "canonical",
+          "expected": "ABJ-1234",
+          "observed": "ABJ-1234",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T009",
+      "name": "Mixed Arabic and Latin letters rejected in strict mode",
+      "input": "AبJ1234",
+      "compare_to": null,
+      "options": {
+        "strictness": "strict",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": false,
+        "expect_error_codes": [
+          "MIXED_SCRIPTS_NOT_ALLOWED"
+        ]
+      },
+      "actual": {
+        "success": false,
+        "canonical": null,
+        "error_codes": [
+          "MIXED_SCRIPTS_NOT_ALLOWED"
+        ],
+        "warning_codes": [],
+        "is_valid": false,
+        "validation_issue_codes": [
+          "MIXED_SCRIPTS_NOT_ALLOWED"
+        ],
+        "display_en": null,
+        "display_ar": null,
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": false,
+          "observed": false,
+          "passed": true
+        },
+        {
+          "check": "error_codes",
+          "expected": [
+            "MIXED_SCRIPTS_NOT_ALLOWED"
+          ],
+          "observed": [
+            "MIXED_SCRIPTS_NOT_ALLOWED"
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T010",
+      "name": "Unsupported Latin letters are rejected",
+      "input": "ABC 1234",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": false,
+        "expect_error_codes": [
+          "UNSUPPORTED_CHARACTERS"
+        ]
+      },
+      "actual": {
+        "success": false,
+        "canonical": null,
+        "error_codes": [
+          "UNSUPPORTED_CHARACTERS"
+        ],
+        "warning_codes": [],
+        "is_valid": false,
+        "validation_issue_codes": [
+          "UNSUPPORTED_CHARACTERS"
+        ],
+        "display_en": null,
+        "display_ar": null,
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": false,
+          "observed": false,
+          "passed": true
+        },
+        {
+          "check": "error_codes",
+          "expected": [
+            "UNSUPPORTED_CHARACTERS"
+          ],
+          "observed": [
+            "UNSUPPORTED_CHARACTERS"
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T011",
+      "name": "Too many digits are rejected",
+      "input": "ABJ 12345",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": false,
+        "expect_error_codes": [
+          "INVALID_DIGIT_COUNT"
+        ]
+      },
+      "actual": {
+        "success": false,
+        "canonical": null,
+        "error_codes": [
+          "INVALID_DIGIT_COUNT"
+        ],
+        "warning_codes": [],
+        "is_valid": false,
+        "validation_issue_codes": [
+          "INVALID_DIGIT_COUNT"
+        ],
+        "display_en": null,
+        "display_ar": null,
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": false,
+          "observed": false,
+          "passed": true
+        },
+        {
+          "check": "error_codes",
+          "expected": [
+            "INVALID_DIGIT_COUNT"
+          ],
+          "observed": [
+            "INVALID_DIGIT_COUNT"
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T012",
+      "name": "Unsupported punctuation is cleaned",
+      "input": " ABJ__1234 ",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": true,
+        "expect_canonical": "ABJ-1234"
+      },
+      "actual": {
+        "success": true,
+        "canonical": "ABJ-1234",
+        "error_codes": [],
+        "warning_codes": [],
+        "is_valid": true,
+        "validation_issue_codes": [],
+        "display_en": "ABJ 1234",
+        "display_ar": "١٢٣٤ ا ب ح",
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        },
+        {
+          "check": "canonical",
+          "expected": "ABJ-1234",
+          "observed": "ABJ-1234",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T013",
+      "name": "Saudi H mapping uses H only for ه",
+      "input": "ABH 1234",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": true,
+        "expect_canonical": "ABH-1234",
+        "expect_display_ar": "١٢٣٤ ا ب ه"
+      },
+      "actual": {
+        "success": true,
+        "canonical": "ABH-1234",
+        "error_codes": [],
+        "warning_codes": [],
+        "is_valid": true,
+        "validation_issue_codes": [],
+        "display_en": "ABH 1234",
+        "display_ar": "١٢٣٤ ا ب ه",
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        },
+        {
+          "check": "canonical",
+          "expected": "ABH-1234",
+          "observed": "ABH-1234",
+          "passed": true
+        },
+        {
+          "check": "display_ar",
+          "expected": "١٢٣٤ ا ب ه",
+          "observed": "١٢٣٤ ا ب ه",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T014",
+      "name": "Saudi J mapping uses ح",
+      "input": "ABJ 1234",
+      "compare_to": null,
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": true,
+        "expect_canonical": "ABJ-1234",
+        "expect_display_ar": "١٢٣٤ ا ب ح"
+      },
+      "actual": {
+        "success": true,
+        "canonical": "ABJ-1234",
+        "error_codes": [],
+        "warning_codes": [],
+        "is_valid": true,
+        "validation_issue_codes": [],
+        "display_en": "ABJ 1234",
+        "display_ar": "١٢٣٤ ا ب ح",
+        "equals": null
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        },
+        {
+          "check": "canonical",
+          "expected": "ABJ-1234",
+          "observed": "ABJ-1234",
+          "passed": true
+        },
+        {
+          "check": "display_ar",
+          "expected": "١٢٣٤ ا ب ح",
+          "observed": "١٢٣٤ ا ب ح",
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "T015",
+      "name": "equals works across Arabic and English forms",
+      "input": "ABJ1234",
+      "compare_to": "ا ب ح ١٢٣٤",
+      "options": {
+        "strictness": "standard",
+        "allow_mixed_scripts": null,
+        "allow_reordered_input": null,
+        "allow_short_digits": null
+      },
+      "expected": {
+        "expect_success": true,
+        "expect_canonical": "ABJ-1234",
+        "expect_equals": true
+      },
+      "actual": {
+        "success": true,
+        "canonical": "ABJ-1234",
+        "error_codes": [],
+        "warning_codes": [],
+        "is_valid": true,
+        "validation_issue_codes": [],
+        "display_en": "ABJ 1234",
+        "display_ar": "١٢٣٤ ا ب ح",
+        "equals": true
+      },
+      "checks": [
+        {
+          "check": "success",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        },
+        {
+          "check": "canonical",
+          "expected": "ABJ-1234",
+          "observed": "ABJ-1234",
+          "passed": true
+        },
+        {
+          "check": "equals",
+          "expected": true,
+          "observed": true,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

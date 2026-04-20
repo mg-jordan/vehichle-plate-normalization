@@ -1,0 +1,107 @@
+# saudi-plate
+
+A production-ready Python library for Saudi vehicle plate parsing, normalization, validation, formatting, and equality comparison.
+
+## Features
+- Parse raw user input from Arabic, Latin, or mixed script input
+- Normalize Arabic-Indic digits to ASCII for storage
+- Validate Saudi plate structure with strict, standard, and lenient modes
+- Format plates for canonical storage, English display, and Arabic display
+- Compare plate inputs by canonical identity
+- Typed public API and test suite included
+
+## Saudi letter mapping
+This library uses the Saudi plate mapping, not general Arabic transliteration.
+
+| Arabic | Latin | Code |
+|---|---|---|
+| ا | A | ALIF |
+| ب | B | BA |
+| ح | J | HA |
+| د | D | DAL |
+| ر | R | RA |
+| س | S | SIN |
+| ص | X | SAD |
+| ط | T | TA |
+| ع | E | AIN |
+| ق | G | QAF |
+| ك | K | KAF |
+| ل | L | LAM |
+| م | Z | MIM |
+| ن | N | NUN |
+| ه | H | HAH |
+| و | U | WAW |
+| ي | V | YA |
+
+## Installation
+```bash
+pip install saudi-plate
+```
+
+## Quick start
+```python
+from saudi_plate import normalize_plate, format_plate, validate_plate, FormatStyle
+
+result = normalize_plate("١٢٣٤ ا ب ح")
+assert result.success
+assert result.canonical == "ABJ-1234"
+
+print(format_plate("ABJ1234", FormatStyle.DISPLAY_AR))
+print(validate_plate("1234 ABJ").is_valid)
+```
+
+## API
+### `normalize_plate(input, options=None)`
+Returns `NormalizeResult` with:
+- `success`
+- `canonical`
+- `plate`
+- `corrections`
+- `errors`
+- `warnings`
+
+### `parse_plate(input, options=None)`
+Returns `ParseResult` with structural parsing results.
+
+### `validate_plate(input, options=None)`
+Returns `ValidationResult` with `is_valid`, `plate`, and `issues`.
+
+### `format_plate(input_or_plate, style=FormatStyle.CANONICAL, options=None)`
+Supported styles:
+- `canonical`
+- `storage`
+- `display_en`
+- `display_ar`
+- `compact_en`
+- `compact_ar`
+
+### `equals(a, b, options=None)`
+Compares two inputs by canonical identity.
+
+## Strictness modes
+### Strict
+- No mixed Arabic and Latin letters
+- No digits-before-letters input
+- Exactly 4 digits required
+
+### Standard
+- Mixed scripts allowed
+- Reordered input allowed with warnings
+- 1 to 4 digits allowed
+
+### Lenient
+- Same acceptance policy as standard, intended for search and support tools
+
+## Development
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -U pip pytest build
+pip install -e .
+pytest
+python -m build
+```
+
+## Notes
+- The library is focused on text parsing and normalization, not OCR or registry lookup.
+- Canonical storage format is `LATINLETTERS-DIGITS`, for example `ABJ-1234`.
