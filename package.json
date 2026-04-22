@@ -1,0 +1,43 @@
+{
+  "name": "saudi-plate",
+  "version": "0.1.0",
+  "description": "Saudi vehicle plate parsing, normalization, validation, and formatting.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./mappings": "./src/mappings.js",
+    "./models": "./src/models.js",
+    "./core": "./src/core.js"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "saudi",
+    "ksa",
+    "vehicle",
+    "license-plate",
+    "validation",
+    "normalization"
+  ],
+  "author": "Osama Samman, OpenAI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mg-jordan/vehichle-plate-normalization/tree/npm/Saudi-Plate-Numbers.git"
+  },
+  "homepage": "https://github.com/mg-jordan/vehichle-plate-normalization/tree/npm/Saudi-Plate-Numbers",
+  "bugs": {
+    "url": "https://github.com/mg-jordan/vehichle-plate-normalization/tree/npm/Saudi-Plate-Numbers/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
