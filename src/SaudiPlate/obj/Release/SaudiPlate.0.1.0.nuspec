@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SaudiPlate</id>
+    <version>0.1.0</version>
+    <authors>Osama Samman, OpenAI</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/mg-jordan/vehichle-plate-normalization/tree/NuGet/Saudi-Plate-Numbers</projectUrl>
+    <description>Saudi vehicle plate parsing, normalization, validation, and formatting for .NET.</description>
+    <tags>saudi ksa vehicle license-plate validation normalization</tags>
+    <repository type="git" url="https://github.com/mg-jordan/vehichle-plate-normalization/tree/NuGet/Saudi-Plate-Numbers" commit="746bcb382e0b080bc47ccb136bb16e48c99066de" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/var/www/html/plate-normalization/src/SaudiPlate/bin/Release/netstandard2.0/SaudiPlate.dll" target="lib/netstandard2.0/SaudiPlate.dll" />
+    <file src="/var/www/html/plate-normalization/src/SaudiPlate/README.md" target="/README.md" />
+  </files>
+</package>

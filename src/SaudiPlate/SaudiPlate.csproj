@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>SaudiPlate</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Osama Samman, OpenAI</Authors>
+    <Company></Company>
+    <Description>Saudi vehicle plate parsing, normalization, validation, and formatting for .NET.</Description>
+    <PackageTags>saudi;ksa;vehicle;license-plate;validation;normalization</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/mg-jordan/vehichle-plate-normalization/tree/NuGet/Saudi-Plate-Numbers</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/mg-jordan/vehichle-plate-normalization/tree/NuGet/Saudi-Plate-Numbers</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>

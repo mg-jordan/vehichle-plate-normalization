@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = SaudiPlate
+build_property.ProjectDir = /var/www/html/plate-normalization/src/SaudiPlate/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

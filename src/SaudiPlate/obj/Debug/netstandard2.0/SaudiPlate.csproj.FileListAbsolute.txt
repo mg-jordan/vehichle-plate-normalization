@@ -1,0 +1,11 @@
+/var/www/html/plate-normalization/src/SaudiPlate/bin/Debug/netstandard2.0/SaudiPlate.deps.json
+/var/www/html/plate-normalization/src/SaudiPlate/bin/Debug/netstandard2.0/SaudiPlate.dll
+/var/www/html/plate-normalization/src/SaudiPlate/bin/Debug/netstandard2.0/SaudiPlate.pdb
+/var/www/html/plate-normalization/src/SaudiPlate/obj/Debug/netstandard2.0/SaudiPlate.csproj.AssemblyReference.cache
+/var/www/html/plate-normalization/src/SaudiPlate/obj/Debug/netstandard2.0/SaudiPlate.GeneratedMSBuildEditorConfig.editorconfig
+/var/www/html/plate-normalization/src/SaudiPlate/obj/Debug/netstandard2.0/SaudiPlate.AssemblyInfoInputs.cache
+/var/www/html/plate-normalization/src/SaudiPlate/obj/Debug/netstandard2.0/SaudiPlate.AssemblyInfo.cs
+/var/www/html/plate-normalization/src/SaudiPlate/obj/Debug/netstandard2.0/SaudiPlate.csproj.CoreCompileInputs.cache
+/var/www/html/plate-normalization/src/SaudiPlate/obj/Debug/netstandard2.0/SaudiPlate.sourcelink.json
+/var/www/html/plate-normalization/src/SaudiPlate/obj/Debug/netstandard2.0/SaudiPlate.dll
+/var/www/html/plate-normalization/src/SaudiPlate/obj/Debug/netstandard2.0/SaudiPlate.pdb

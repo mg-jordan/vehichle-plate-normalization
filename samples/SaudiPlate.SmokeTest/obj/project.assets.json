@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "SaudiPlate/0.1.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SaudiPlate.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SaudiPlate.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SaudiPlate/0.1.0": {
+      "type": "project",
+      "path": "../../src/SaudiPlate/SaudiPlate.csproj",
+      "msbuildProject": "../../src/SaudiPlate/SaudiPlate.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "SaudiPlate >= 0.1.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/osama/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/var/www/html/plate-normalization/samples/SaudiPlate.SmokeTest/SaudiPlate.SmokeTest.csproj",
+      "projectName": "SaudiPlate.SmokeTest",
+      "projectPath": "/var/www/html/plate-normalization/samples/SaudiPlate.SmokeTest/SaudiPlate.SmokeTest.csproj",
+      "packagesPath": "/home/osama/.nuget/packages/",
+      "outputPath": "/var/www/html/plate-normalization/samples/SaudiPlate.SmokeTest/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/osama/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/var/www/html/plate-normalization/src/SaudiPlate/SaudiPlate.csproj": {
+              "projectPath": "/var/www/html/plate-normalization/src/SaudiPlate/SaudiPlate.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.420/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
