@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "iraqi-plate"
+version = "0.1.1"
+description = "Python library for Iraqi vehicle plate normalization, parsing, validation, formatting, and comparison."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Osama Samman" },
+  { name = "OpenAI" }
+]
+keywords = [
+  "iraq",
+  "iraqi",
+  "vehicle plate",
+  "license plate",
+  "normalization",
+  "validation"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Text Processing :: Linguistic"
+]
+
+[project.urls]
+Homepage = "https://github.com/mg-jordan/vehichle-plate-normalization/tree/py/iraqi-plate"
+Repository = "https://github.com/mg-jordan/vehichle-plate-normalization/tree/py/iraqi-plate"
+Issues = "https://github.com/mg-jordan/vehichle-plate-normalization/issues"
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2.1",
+  "pytest>=8.2.0",
+  "twine>=5.1.1"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/iraqi_plate"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

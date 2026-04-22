@@ -1,3 +1,33 @@
+Metadata-Version: 2.4
+Name: iraqi-plate
+Version: 0.1.1
+Summary: Python library for Iraqi vehicle plate normalization, parsing, validation, formatting, and comparison.
+Project-URL: Homepage, https://github.com/mg-jordan/vehichle-plate-normalization/tree/py/iraqi-plate
+Project-URL: Repository, https://github.com/mg-jordan/vehichle-plate-normalization/tree/py/iraqi-plate
+Project-URL: Issues, https://github.com/mg-jordan/vehichle-plate-normalization/issues
+Author: Osama Samman, OpenAI
+License: MIT
+License-File: LICENSE
+Keywords: iraq,iraqi,license plate,normalization,validation,vehicle plate
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.9
+Provides-Extra: dev
+Requires-Dist: build>=1.2.1; extra == 'dev'
+Requires-Dist: pytest>=8.2.0; extra == 'dev'
+Requires-Dist: twine>=5.1.1; extra == 'dev'
+Description-Content-Type: text/markdown
+
 # iraqi-plate
 
 A Python library for parsing, normalizing, validating, formatting, and comparing Iraqi vehicle plate numbers.
